@@ -6,7 +6,6 @@
 # Expected Output : ['Green', 'White', 'Black']
 
 list3 = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow'] 
-r= len(list3)
 print(list3)
 
 list3.pop(0)

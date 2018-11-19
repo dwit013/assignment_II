@@ -12,4 +12,5 @@ r = len(list)
 
 for i in range(r):
     list[i]=list[i]*num1
+    
 print(list)    

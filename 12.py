@@ -6,5 +6,10 @@
 # Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
 
 tuple = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')] 
-tuple2 = [t for t in tuple if t]
+
+tuple2 = []
+for item in tuple:
+    if item:
+        tuple2.append(item)
+
 print(tuple2)

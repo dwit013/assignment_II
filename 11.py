@@ -5,8 +5,13 @@
 # Sample list: [(10, 20, 40), (40, 50, 60), (70, 80, 90)] 
 # Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
 
-list = [(10, 20, 40), (40, 50, 60), (70, 80, 90)] 
+initial = [(10, 20, 40), (40, 50, 60), (70, 80, 90)] 
 
-list2 = [t[:-1] + (100,) for t in list]
+tuple2 = []
+for i in initial: 
+    t = list(i) 
+    t[-1]=100 
+    z = tuple(t) 
+    tuple2.append(tuple(z))
 
-print(list2)
+print (tuple2)

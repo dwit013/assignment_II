@@ -1,1 +1,3 @@
 # assignment_II
+
+All assignment question and answer of assignment 2. Please note                                                                                                                                   that the first word before _ represents the qusetion number. For example q1_uma                                                                                                                                  nga_746.py represents solution of question 1. Bonus questions starts with bonus.    

@@ -1,0 +1,159 @@
+#1.Write a program to print all prime numbers between 1 and 100
+
+for num in range(1,101):
+    temp = 0
+    if num < 2:
+        temp=1
+    else:
+        for i in range(2,num):
+            if num % i == 0:
+                temp=1
+    if(temp==0):            
+        print(num) 
+
+
+#2. Write a Python program to get a string made of the first 2 and the last 2 chars
+ from a given a string. If the string length is less than 2, return “Empty String”.
+
+
+string1=str(input("enter string"))
+l=len(string1)
+
+if(l<2):
+    print("Empty string.")
+
+else:
+    print("Result: ",string1[0],string1[1],string1[l-2],string1 [l-1])
+
+
+
+#3.Write a Python program to get a single string from two given strings, separated by a space and
+#swap the first two characters of each string.
+#Sample String : 'abc', 'xyz'
+#Expected Result : 'xyc abz'
+
+
+string1=str(input("Enter first string: "))
+string2=str(input("Enter second string: "))
+
+s1=string2[:2]+string1[2:]
+s2=string1[:2]+string2[2:]
+
+print(s1," ",s2)
+
+
+#4.Write a Python program to multiply each item in a list by an integer
+
+list = [1,2,3,10]
+print("The list is", list)
+num = int(input("Enter the integer to multiply: "))
+for i in list:
+    print(i * num)
+
+
+#5.Write a Python program to count the number of strings where the string length is 2 or more and
+#the first and last character are same from a given list of strings.
+
+list=["aba","abc","1231"]
+count=0
+ for val in list:
+    n=len(val)
+    if(n>=2 and(val[0]==val[n-1])):
+        count=count+1
+ print("Expected result is ",count)    
+    
+
+#6.Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+#Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+#Expected Output : ['Green', 'White', 'Black']
+ 
+list = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow','Purple','Blue']
+print("The list is",list)
+
+list.pop(0)
+list.pop(4)
+list.pop(5)
+
+print("The list after removing the0th 4th and 5th element is: ",list)
+
+
+
+#7.Write a Python program to insert a given string at the beginning of all items in a list.
+#Sample list : [1,2,3,4], string : emp
+#Expected output : ['emp1', 'emp2', 'emp3', 'emp4']
+ 
+list = [1,2,3,4]
+print("List before ",list)
+list1=['emp{0}'.format(i) for i in list]
+print("list after adding emp",list1)
+
+
+
+#8.Write a Python program to remove duplicates from a list.
+list1=[1,2,3,7,8,9,3,2,1]
+list2=[]
+for num in list1:
+    if num not in list2:
+        list2.append(num)
+
+print(list2)
+
+
+
+#9.Write a Python program to combine two dictionary adding values for common keys. 
+d1={'a':100,'b':200,'c':300}
+d2={'a':300,'b':200,'d':400}
+print(d1.keys())
+for i in d1.keys():
+    for j in d2.keys():
+        if(i==j):
+            print(d1.update(i+j))
+
+
+
+#10.Write a Python script to concatenate dictionaries and create a new one.
+#Sample Dictionary :
+#dic1 = {1:10, 2:20}
+#dic2 = {3:30, 4:40}
+#dic3 = {5:50, 6:60}
+#Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+
+dic1 = {1:10, 2:20}
+dic2 = {3:30, 4:40}
+dic3 = {5:50, 6:60}
+
+dic1.update(dic2)
+dic1.update(dic3)
+
+print(dic1)
+
+
+
+#11.Write a Python program to replace last value of tuples in a list.
+#Sample list: [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+#Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
+
+
+tuple = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+print("The tuple before replacement",tuple)
+tuple1=[]
+for new in tuple:
+    new = new[:2]+(100,)
+    tuple1.append(new)
+     
+print("The tuple after replacement",tuple1)
+
+
+
+#12. Write a Python program to remove an empty tuple(s) from a list of tuples.
+#Sample data: [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+#Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
+ 
+tuple= [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+print("Tuple Before",tuple)
+tuple1=[]
+for new in tuple:
+    if new:
+        tuple1.append(new)
+        
+print("Tuple after",tuple1)        

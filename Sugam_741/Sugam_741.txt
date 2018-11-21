@@ -1,0 +1,93 @@
+NAME:SUGAM MAINALI	
+CLASS OF 2021'B'
+ROLL NO 741
+
+#QN1
+#prime number between 1 and 100
+lower=1
+upper=100
+for num in range(lower,upper+1):
+    if num>1:
+        for i in range(2,num):
+            if(num%i)==0:
+                break
+        else:
+            print(num)
+
+#QN 2
+def string(str):
+    if len(str)<2:
+        return('')
+
+    return str[0:2]+str[-2:]
+print(string('HellowroLD'))
+print(string('a3a3'))
+print(string('w'))
+
+
+#QN3
+def string(a,b):
+    new_a=b[:2]+a[2:]
+    new_b=a[:2]+b[2:]
+
+    return new_a+' '+new_b
+print(string('abc','xyz'))
+
+
+#QN4
+my_list=[1,2,3,4,5]
+my_new_list=[i*5 for i in my_list]
+
+print(my_new_list)
+
+#QN5
+def match_words(words):
+  ctr = 0
+
+  for word in words:
+    if len(word) > 1 and word[0] == word[-1]:
+      ctr += 1
+  return ctr
+
+print(match_words(['abc', 'xyz', 'aba', '1221']))
+
+#QN6
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+color = [x for (i,x) in enumerate(color) if i not in (0,4,5)]
+print(color)
+
+
+#QN7
+num = [1,2,3,4]
+print(['emp{0}'.format(i) for i in  num])
+
+#QN8
+a = [10,20,30,20,10,50,60,40,80,50,40]
+print(list(set(a)))
+
+
+#QN9
+from collections import Counter
+d1 = {'a': 100, 'b': 200, 'c':300}
+d2 = {'a': 300, 'b': 200, 'd':400}
+d = Counter(d1) + Counter(d2)
+print(d)
+
+
+#QN10
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+dic3={5:50,6:60}
+dic4 = {}
+for d in (dic1, dic2, dic3): dic4.update(d)
+print(dic4)
+
+
+#QN11
+l = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+print([t[:-1] + (100,) for t in l])
+
+#QN12
+L = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+L = [t for t in L if t]
+print(L)
